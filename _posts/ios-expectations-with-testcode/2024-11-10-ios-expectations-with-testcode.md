@@ -4,6 +4,7 @@ date: 2024-11-10 15:55:00 +07:00
 modified: 2024-11-10 15:55:00 +07:00
 tags: [ios, RxSwift, ReSwift, in-english]
 description: Let's see the testcode of a ThunkCreator which has API calls and business logic about the API response.
+image: "/ios-expectations-with-testcode/swift-docs-preview.png"
 ---
 
 There's this testcode of iOS project and I’d like to focus on the expectation part.
@@ -46,8 +47,10 @@ func commonExecutor(apiParameter1: String, apiParameter2: String, expectResult: 
 ```
   
 
-#### Swift document
-[<img src="[Screenshot 2024-11-10 at 15.01.51.png]">](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations)
+### Swift document
+
+⤵️ Tap for jump to the document page
+[<img src="/ios-expectations-with-testcode/swift-docs-preview.png" alt="shell">](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations)
 
 
 It’s used for asynchronous code because asynchronous code could be not executed on main thread.
@@ -60,7 +63,7 @@ Two approaches for testing asynchronous code
 
   
 
-#### Usage
+### Usage
 
 ```swift
 // Create an expectation for an asynchronous task.  
@@ -109,6 +112,6 @@ extension GETAsyncRequestable where Self: AsyncRequestBase {
 Then I figured out that our ThunkCreator’s send function(the one be tested up there) is not async function and it coud be refactored. I’m gonna try to refactor and upload Pull Request about that in couple days 😙
 
 
-#### Resourcees
+### Resourcees
 
 - [SwiftDoc asynchronous tests and expectations](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations)  
