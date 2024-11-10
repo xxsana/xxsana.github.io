@@ -50,7 +50,7 @@ func commonExecutor(apiParameter1: String, apiParameter2: String, expectResult: 
 ### Swift document
 
 ⤵️ Tap for jump to the document page
-[<img src="/ios-expectations-with-testcode/swift-docs-preview.png" alt="shell">](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations)
+[<img src="ios-expectations-with-testcode/swift-docs-preview.png" alt="shell">](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations)
 
 
 It’s used for asynchronous code because asynchronous code could be not executed on main thread.
