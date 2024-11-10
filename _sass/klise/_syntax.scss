@@ -28,7 +28,7 @@ pre.highlight, pre {
     padding-left: 20px;
   }
   border: 1px solid rgba(128,128,128,0.1);
-  background-color: #1a1b21;
+  background-color: #1e1e1e;
   border-radius: 2px;
   padding: 10px;
   display: block;
@@ -53,9 +53,10 @@ pre.highlight, pre {
   margin: 0;
 }
 
+// default text
 .highlight,
 .highlight .w {
-  color: #fbf1c7;
+  color: #e8e8e8;
   // background-color: #1a1b21;
 }
 
@@ -87,9 +88,10 @@ pre.highlight, pre {
   color: #fbf1c7;
 }
 
+// :
 .highlight .p,
 .highlight .pi {
-  color: #fbf1c7;
+  color: #e8e8e8;
 }
 
 .highlight .gi {
@@ -98,7 +100,7 @@ pre.highlight, pre {
 }
 
 .highlight .gd {
-  color: #fb4934;
+  color: #bc66f5;
   background-color: #282828;
 }
 
@@ -107,12 +109,13 @@ pre.highlight, pre {
   font-weight: bold;
 }
 
+// let
 .highlight .k,
 .highlight .kn,
 .highlight .kp,
 .highlight .kr,
 .highlight .kv {
-  color: #fb4934;
+  color: rgb(237, 122, 149);
 }
 
 .highlight .kc {
@@ -120,11 +123,11 @@ pre.highlight, pre {
 }
 
 .highlight .kt {
-  color: #fabd2f;
+  color: #97e8a0;
 }
 
 .highlight .kd {
-  color: #fe8019;
+  color: rgb(237, 122, 149);
 }
 
 .highlight .s,

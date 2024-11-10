@@ -7,15 +7,15 @@ $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.85;
 
 // Font weight
-// $light-weight: 300; // uncomment if necessary
+$light-weight: 300; // uncomment if necessary
 $normal-weight: 400;
 $bold-weight: 700;
-// $black-weight: 900; // uncomment if necessary
+$black-weight: 900; // uncomment if necessary
 
 //Light Colors
 $text-base-color: #434648;
-$text-link-blue: #003fff;
-$text-link-blue-active: #0036c7;
+$text-link-blue: #1a6dd9;
+$text-link-blue-active: #7eaae3;
 
 $black: #0d122b;
 $light: #ececec;
@@ -35,7 +35,7 @@ $dark-smoke: #4a4d56;
 $dark-gray: #767f87;
 
 // Width of the content area
-$wide-size: 890px;
+$wide-size: 940px;
 $narrow-size: 720px;
 
 // Padding unit
