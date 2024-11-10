@@ -4,7 +4,7 @@ date: 2024-11-10 15:55:00 +07:00
 modified: 2024-11-10 15:55:00 +07:00
 tags: [ios, RxSwift, ReSwift, in-english]
 description: Let's see the testcode of a ThunkCreator which has API calls and business logic about the API response.
-image: "ios-expectations-with-testcode/swift-docs-preview.png"
+image: "swift-docs-preview.png"
 ---
 
 There's this testcode of iOS project and I’d like to focus on the expectation part.
@@ -50,7 +50,7 @@ func commonExecutor(apiParameter1: String, apiParameter2: String, expectResult: 
 ### Swift document
 
 ⤵️ Tap for jump to the document page
-[<img src="ios-expectations-with-testcode/swift-docs-preview.png" alt="shell">](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations)
+[<img src="swift-docs-preview.png" alt="shell">](https://developer.apple.com/documentation/xctest/asynchronous_tests_and_expectations)
 
 
 It’s used for asynchronous code because asynchronous code could be not executed on main thread.
