@@ -1,112 +1,42 @@
 ---
-title: React Component with Dot Notation
-date: 2018-04-07 23:04:00 +07:00
-tags: [javascript, react]
-description: Learn how to define a React component that is accessible through the dot notation. A common component pattern to show a parent-child relation.
+title: 🗞️ 나는 오늘부터 경제기사를 읽기로 했다 (진행중)
+date: 2024-11-24 13:36:00 +09:00
+tags: [book-note, study-of-money, in-korean]
+description: 경제 기초지식을 가볍게 배울 수 있는 책을 읽으며 든 깨달음들 모음
 ---
 
-**This article is for Demo purpose**
+- 이 책은 경제의 기초지식을 실제 경제기사를 인용하며 설명 해 주는 친절한 책이다. 이번에는 다른 책리뷰글과 다르게 인용 자체보다는 책을 읽어나가며 새로 배운 개념에 대해 다시 한번 생각해보며 깨달은 것들을 기록해보았다. 주관이 많이 담겼기에 요약을 찾는 사람들에게는 맞지 않는 글일 것이다.
+- 글쓴이는 정리된 기본 지식의 위에 최신 정보를 쌓음으로써 보는 눈이 생긴다고 한다! 나도 이것저것 주워듣기만 한 베이스를 채우고 싶다. 사회에서 여러가지를 배우며 가치관을 형성하듯 경제를 보는 눈도 그렇게 키워가는 거겠지. 그게 있으면 어떤 의견에 휘둘리지 않게 되겠지
+- 그러니 이 포스트는 경제 지식이 거의 없는 한 젊은이가 경제기사를 베이스로 기본지식을 다루는 한 책을 읽으며 느낀 꽤나 바보같은 감상문이 되겠다. 
 
-The article was originally on [this repo](https://github.com/risan/risanb.com/blob/master/content/posts/react-component-with-dot-notation/index.md)
+###### GDP(Gross Domestic Product)
+- 1인당 GDP가 3만달러가 넘었다는 18년도 기사를 인용한 부분에서 멋대로 환율계산을 해 봤더니 4200만원이였다. 와 1인 대비 진짜 많이 버는구나. 이정도면 성장한 국가 맞지 싶었는데, 가계, 기업, 정부에서의 생산활동 전부를 더해서 국민 수로 나눈 거란다.. 헤헤 난 정말 경제를 아무것도 모르는군
+	- 그리고 딱 이 생각을 하자 마자 GDP를 개개인의 소득으로 착각하지 말라는 말을 책에서 해 줬다. 어케 아셨어요ㅋ
+- GDP는 국내 회사가 포함될거니까 난 일본 GDP를 올려주고 있는거군.. 흠
+	- 국적까지 고려한 건 GNP(Gross National Product)라고
+	- 그래도 외국인의 고용 등이 기여하는게 많아서 GDP가 더 유용하고 널리 쓰인단다.. 그건 그래. 세계화 된 세상에서 분리 할 필요는 없지.
+- 가계 - 소득 / 기업 - 이윤 / 정부 - 세금
+- “GDP는 지출의 결과인 저축, 소비, 투자, 정부지출 등의 합과 일치하게 된다.” 당연한 말인데 새삼 큰 그림이 머릿속에 들어오는 문장이라 스크랩해봄
+- 생산물 가격의 측정은 기준연도를 설정함으로서 물가 증감을 반영하지 않으려 한단다. 하긴 올해 바이러스로 달걀값이 올랐다고 GDP상승, 경제가 성장했다고 말하면 뻥까지 말라 하겠지..
+	- 기준연도 가격으로 계산: 실질GDP `<증가하면 ‘🗣️여러분 경제가 성장했어욧’`
+	- 당해연도 가격으로 계산: 명목GDP
+- GDP는 달러로 환산되니까, 원화의 소득이 높아졌더라도 환율이 그걸 이겨버리면 과소평가된단다. 역시 환율이 중요하군.. 그래도 경제성장률의 측정에는 기준연도로 환율도 고정시켜서 본단다. 음 그게 맞지
+- 뭔가 소득, 인구, 무역, 달러의 물량.. 이 모든게 다 어떤 한 수치에 영향을 미친다는 게 신기하고, 뭔가 수학처럼 정해진 0 위에서 +1씩 해가는 것이 아닌, 기준점이 없이 파도처럼 오르락 내리락 하는 이 경제관련 수치들이 숨을 쉬고 있는 것 처럼 느껴진다. 이게 경제학의 매력인가요?
+> 다시 말하자면 경제성장률은 모든 가격 변수의 변화를 개입시키지 않고, 단순히 몇 개를 더 생산하게 되었는지를 관찰해 계산한다. 즉 경제성장률은 ‘실질’ GDP가 얼마나 증가했는지를 나타내는 것이다. 반면에 매년 그 해의 경제규모 자체를 나타내는 GDP는 그 해의 가격과 환율을 기준으로 계산하는 ‘명목’ GDP를 기준으로 봐야 한다.
+- 뭔가 앞의 개념들을 찬찬히 배움으로써 이 경제단어 많은 한 문단이 이해가 되어서 스스로 좀 감동했다..
 
-This is my answer to someone's question on [StackOverflow](https://stackoverflow.com/questions/49256472/react-how-to-extend-a-component-that-has-child-components-and-keep-them/49258038#answer-49258038). How can we define a React component that is accessible through the dot notation?
+###### 경제성장률
+- 경제성장률이 낮다 == 경제주체들의 소득이 더디게 증가
+- 경제성장률이 낮다는 게 경제주체들의 행복도가 떨어진다는 대목이 있는데, 참 말 그대로인건 알겠지만 요즘 돈돈거리는 거에 꽤 거부감을 느끼는 나에겐 조금 거부감 들다가도.. 아냐 그래도 개인이 많은 자산에 가치를 두든 안 두든, 경제 자체가 안정적이게 잘 돌아가는 건 무엇보다 중요한 게 맞지 맞아 싶었다
+- 뭔가 책에서 예시로 제시하는 연도들이 꽤 최근이라, 내가 겪는 경제가 이렇게 데이터로 남아서 미래에 지표를 제시한다는 걸 새삼 느꼈다. 너무 바보같은 감상인가ㅋ
+- 경제 성장률 예측 == A국이 내년에 몇 개의 의자를 더 생산 할 수 있을지 예상해 보는 것. 생산 측면, 소비 측면, 해외 측면 등 고려
+  - 고용 인구
+  - 투자 -> 설비개선 등
+  - 기술혁신
+  - 소비 수요
+  - 해외 경기 호전
 
-Take a look at the following code. We have the `Menu` component and its three children `Menu.Item`:
+`💬이하 읽는 중... 꽤 잘 읽히고 이해도 잘 되는데 내 완벽주의 때문에 각잡고 읽으려 해서 시간이 좀 걸리고 있다`
 
-```jsx
-const App = () => (
-  <Menu>
-    <Menu.Item>Home</Menu.Item>
-    <Menu.Item>Blog</Menu.Item>
-    <Menu.Item>About</Menu.Item>
-  </Menu>
-);
-```
-
-How can we define a component like `Menu`? Where it has some kind of "sub-component" that is accessible through a dot notation.
-
-Well, it's actually a pretty common pattern. And it's not really a sub-component, it's just another component being attached to another one.
-
-Let's use the above `Menu` component for example. We'll put this component to its own dedicated file: `menu.js`. First, let's define these two components separately on this module file:
-
-```jsx
-// menu.js
-import React from 'react';
-
-export const MenuItem = ({ children }) => <li>{children}</li>;
-
-export default const Menu = ({ children }) => <ul>{children}</ul>;
-```
-
-It's just a simple functional component. The `Menu` is the parent with `ul` tag. And the `MenuItem` will act as its children. Now we can use these two components like so:
-
-```jsx
-import React from "react";
-import { render } from "react-dom";
-import Menu, { MenuItem } from "./menu";
-
-const App = () => (
-  <Menu>
-    <MenuItem>Home</MenuItem>
-    <MenuItem>Blog</MenuItem>
-    <MenuItem>About</MenuItem>
-  </Menu>
-);
-
-render(<App />, document.getElementById("root"));
-```
-
-Where's the dot notation? To make our `MenuItem` component accessible through the dot nation, we can simply attach it to the `Menu` component as a static property. To do so, we can no longer use the functional component for `Menu` and switch to the class component instead:
-
-```jsx
-// menu.js
-import React, { Component } from 'react';
-
-export default const MenuItem = ({ children }) => <li>{children}</li>;
-
-export default class Menu extends Component {
-  static Item = MenuItem;
-
-  render() {
-    return (
-      <ul>{this.props.children}</ul>
-    );
-  }
-}
-```
-
-Now we can use the dot notation to declare the `MenuItem` component:
-
-```jsx
-import React from "react";
-import { render } from "react-dom";
-import Menu from "./menu";
-
-const App = () => (
-  <Menu>
-    <Menu.Item>Home</Menu.Item>
-    <Menu.Item>Blog</Menu.Item>
-    <Menu.Item>About</Menu.Item>
-  </Menu>
-);
-
-render(<App />, document.getElementById("root"));
-```
-
-You can also put the `MenuItem` component definition directly within the `Menu` class. But this way you can no longer import `MenuItem` individually.
-
-```jsx
-import React, { Component } from "react";
-
-export default class Menu extends Component {
-  static Item = ({ children }) => <li>{children}</li>;
-
-  render() {
-    return <ul>{this.props.children}</ul>;
-  }
-}
-```
-
-**This article is for Demo purpose**
-
-The article was originally on [this repo](https://github.com/risan/risanb.com/blob/master/content/posts/react-component-with-dot-notation/index.md)
+###### 그 외
+- 나는 여느 때와 같이 밀리의서재를 통해 이북으로 읽었는데 전체적으로 챕터 하나하나가 짧고, 소제목으로 잘 정리되어 있어서일까. 되게 이북으로 읽기 편하고 마치 인터넷 칼럼을 읽고 있는 듯한 깔끔한 느낌이 들었다. 챕터제목이 중앙정렬인 것도 한 몫 할 지도..
